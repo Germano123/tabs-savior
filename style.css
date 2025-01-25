@@ -1,0 +1,364 @@
+:root {
+    --primary-color: #6666ff;
+    --secondary-color: #b8baff;
+    --terciary-color: #c9e8ff;
+    --contrast-color: #0c0c16;
+    --neutral-color: #b9f0d7;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    height: 700px;
+    background-color: var(--primary-color);
+}
+
+.header-title {
+    color: var(--contrast-color);
+}
+
+.container {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-radius: 30px 30px 0 0;
+    border: 15px solid var(--terciary-color);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form input {
+    margin-bottom: 8px;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 11px;
+}
+
+form button {
+    padding: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+#tags-list {
+    margin-top: 10px;
+}
+
+.tag {
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.tag:hover {
+    background-color: #f0f0f0;
+}
+
+.links {
+    display: none;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 2px solid #007bff;
+}
+
+.links a {
+    display: block;
+    margin: 5px 0;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* From Uiverse.io by liyaxu123 */
+.form-control {
+    width: 90%;
+    align-self: center;
+    position: relative;
+}
+
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 1rem;
+    min-width: 5px;
+    color: #fff;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color: lightblue;
+    transform: translateY(-30px);
+}
+
+/* From Uiverse.io by satyamchaudharydev */
+.form-btn {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffff;
+    background-color: rgb(0 107 179);
+    border: 3px solid #ffffff4d;
+    border-radius: 9999px;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.form-btn:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+}
+
+.form-btn:hover::before {
+    animation: shine 1.5s ease-out infinite;
+}
+
+.form-btn::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0) 70%);
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+}
+
+@keyframes shine {
+    0% {
+        left: -100px;
+    }
+
+    60% {
+        left: 100%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+/* From Uiverse.io by kamehame-ha */
+.githubtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 25px;
+    gap: 15px;
+    background-color: #181717;
+    outline: 3px #181717 solid;
+    outline-offset: -3px;
+    border-radius: 23px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.githubtn .text {
+    color: white;
+    font-weight: 700;
+    font-size: .85rem;
+    transition: 400ms;
+}
+
+.githubtn svg path {
+    transition: 400ms;
+}
+
+.githubtn:hover {
+    background-color: transparent;
+}
+
+.githubtn:hover .text {
+    color: #181717;
+}
+
+.githubtn:hover svg path {
+    fill: #181717;
+}
+
+/* Accordion container */
+.accordion {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Accordion header */
+.accordion-header {
+    padding: 10px;
+    background-color: #f4f4f4;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Accordion content */
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+}
+
+/* Icon styles */
+.icon {
+    cursor: pointer;
+    margin-right: 8px;
+    color: #666;
+}
+
+.icon:hover {
+    color: #000;
+}
+
+/* Open in new tab icon */
+.open-icon {
+    margin-left: auto;
+}
+
+/* General Accordion Styles */
+.accordion {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Accordion Header */
+.accordion-header {
+    padding: 10px;
+    background-color: #f4f4f4;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Accordion Header Hover Effect */
+.accordion-header:hover {
+    background-color: #eaeaea;
+}
+
+/* Accordion Content (Initially Hidden) */
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+}
+
+/* Link Container Styles */
+.link-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* Link Style */
+.link-container a {
+    margin-right: auto;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.link-container a:hover {
+    text-decoration: underline;
+}
+
+/* Icon Styles */
+.icon {
+    cursor: pointer;
+    margin-right: 8px;
+    color: #666;
+    font-size: 1rem;
+}
+
+.icon:hover {
+    color: #000;
+}
+
+/* Open Icon Specific Style */
+.open-icon {
+    margin-left: auto;
+    font-size: 1rem;
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--terciary-color);
+    border-radius: 40px 40px 0 0;
+}

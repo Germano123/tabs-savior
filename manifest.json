@@ -1,0 +1,11 @@
+{
+    "name": "Tabs Savior",
+    "version": "0.0.1",
+    "description": "Your ultimate solution to save tabs and organize URLs effortlessly—no need to keep pages open anymore!",
+    "author": "Germano Gomes",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "index.html",
+        "defaut_title": "Tabs Savior"
+    }
+}
